@@ -1,0 +1,243 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html {
+  font-size: 100%;
+  min-height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body {
+  font-family: "LM Roman Caps 10", Times, "Times New Roman", serif;
+}
+.application-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.header-wrapper {
+  width: 100%;
+}
+.header-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 250px;
+  margin: 0 50px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.video-header {
+  z-index: 999999;
+  position: absolute;
+  left: 11rem;
+  top: 14rem;
+}
+
+.video {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  color: #9e6e69;
+  // padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  left: -75px;
+  width: 1205px;
+  height: 350px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.links {
+  color: #9e6e69 !important;
+  cursor: pointer;
+}
+
+.nav-item {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+// .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.engagment-rings {
+  width: 25%;
+  padding: 5px 0px 0px 0px;
+}
+.engagment-rings img {
+  width: 100%;
+  padding: 10px 10px 0px 10px;
+}
+.engagment-rings img:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.dropdown-content.bands{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  left: -168px;
+  width: 1205px;
+  height: 500px;
+}
+
+.dropdown-content.collection{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  left: -222px;
+  width: 1205px;
+  height: 350px;
+}
+.bands-rings {
+  width: 50%;
+  padding: 5px 0px 0px 0px;
+}
+.bands-rings img {
+  width: 100%;
+  max-height: 60%;
+  padding: 10px 10px 0px 10px;
+}
+
+.bands-rings img:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.main-banner-wrapper {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.box-one, .box-two, .box-three, .box-four {
+  width: 50%;
+}
+.box-one {
+  width: 50%;
+  height: 500px;
+  background-color: red;
+}
+.box-two, .box-three img {
+  width: 100%;
+}
+.slika {
+  background-image: url('./assets/slike/explore-moissanite_2000x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slika2 {
+  background-image: url('./assets/slike/18531_01_2000x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.design-wrapper {
+  width: 80%;
+  margin-left: 10%;
+}
+.header-name {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  font-family: "LM Roman Caps 10", Times, "Times New Roman", serif;
+  color: #8a8b83;
+}
+.favorite-img {
+  width: 20%;
+}
+.favorite-img img {
+  width: 100%;
+}
+.favorite-img img:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+
+
+/*********************  Instagram section  ********************************************/
+
+.instagram-header {
+  text-align: center;
+  color: #8a8b83;
+  font-size: 3.5rem;
+}
+.instagram-hashtag {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #8a8b83;
+}
+
+.instagram-container {
+  margin: 0;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.inst-colona {
+  padding: 0;
+  width: 16%;
+}
+
+.inst-photo {
+  width: 100%;
+}
