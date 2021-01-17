@@ -1,31 +1,23 @@
-import { FavoriteDesignComponent } from './favorite-design/favorite-design.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { InstagramComponent } from './instagram/instagram.component';
-import { MainBannerComponent } from './main-banner/main-banner.component';
-import { VideoSectionComponent } from './video-section/video-section.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    InstagramComponent,
-    MainBannerComponent,
-    VideoSectionComponent,
-    FavoriteDesignComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    SharedModule
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,30 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { MainBannerComponent, PageNotFoundComponent } from '.';
 
-import { HeaderComponent } from './header/header.component';
-import { RingsComponent } from './rings/rings.component';
-import { FooterComponent } from './footer/footer.component';
-
-
+const sharedComponents = [MainBannerComponent, PageNotFoundComponent];
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    RingsComponent
-    ],
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule,
-    BsDropdownModule.forRoot()
-  ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    RingsComponent
-  ]
+  declarations: [sharedComponents],
+  imports: [CommonModule],
+  exports: [sharedComponents],
 })
-export class SharedModule { }
+export class SharedModule {}

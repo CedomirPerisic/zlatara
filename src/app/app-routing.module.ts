@@ -1,58 +1,41 @@
-import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { InstagramComponent } from './instagram/instagram.component';
-import { MainBannerComponent } from './main-banner/main-banner.component';
-import { FavoriteDesignComponent } from './favorite-design/favorite-design.component';
-import { VideoSectionComponent } from './video-section/video-section.component';
-import { HomeComponent } from './home/home.component';
-
+import { PageNotFoundComponent } from './shared';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    loadChildren: () =>
+      import('./home/home.module').then((module) => module.HomeModule),
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'collections/:collection',
+    loadChildren: () =>
+      import('./collection/collection.module').then(
+        (module) => module.CollectionModule
+      ),
   },
   {
-    path: 'video-section',
-    component: VideoSectionComponent
+    path: 'products/:product',
+    loadChildren: () =>
+      import('./product/product.module').then((module) => module.ProductModule),
   },
   {
-    path: 'favorite-design',
-    component: FavoriteDesignComponent
+    path: 'cms',
+    loadChildren: () =>
+      import('./cms/cms.module').then((module) => module.CmsModule),
+    canActivate: [],
   },
   {
-    path: 'main-banner',
-    component: MainBannerComponent
-  },
-  {
-    path: 'instagram',
-    component: InstagramComponent
-  },
-  {
-    path: 'header',
-    loadChildren: () => import('./shared/header/header.module')
-      .then( module => module.HeaderModule),
-  },
-  {
-    path: 'footer',
-    loadChildren: () => import('./shared/footer/footer.module')
-      .then( module => module.FooterModule),
-  },
-  {
-    path: 'rings',
-    loadChildren: () => import('./shared/rings/rings.module')
-      .then( module => module.RingsModule),
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
